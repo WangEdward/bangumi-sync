@@ -4,10 +4,11 @@
   "description": "A script that automatically syncs all anime collections from bgm.tv to Anilist.",
   "main": "build/main.js",
   "scripts": {
-    "start": "npm run build && node build/main.js",
-    "token": "npm run build && node build/utils/get_token.js",
-    "start-server": "npm run build && node build/main.js --server",
-    "build": "rimraf ./build && tsc"
+    "start": "node build/main.js",
+    "token": "node build/utils/get_token.js",
+    "start-server": "node build/main.js --server",
+    "build": "rimraf ./build && tsc",
+    "postinstall": "npm run build"
   },
   "keywords": [
     "bangumi",
